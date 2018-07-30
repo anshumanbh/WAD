@@ -8,5 +8,8 @@ WORKDIR /root/wad
 RUN pip install -r requirements.txt
 RUN pip install wad
 
-ENTRYPOINT [ "wad" ]
+COPY run.py .
+COPY run.sh .
+RUN chmod +x run.sh
 
+ENTRYPOINT [ "./run.sh" ]
