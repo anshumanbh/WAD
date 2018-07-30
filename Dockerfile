@@ -11,5 +11,3 @@ RUN pip install wad
 COPY run.py .
 COPY run.sh .
 RUN chmod +x run.sh
-
-ENTRYPOINT [ "./run.sh" ]
